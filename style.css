@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #667eea;
+    color: white;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+
+.speed-control label {
+    font-weight: 600;
+    color: #555;
+}
+
+#speedSlider {
+    width: 120px;
+}
+
+#speedValue {
+    font-weight: 600;
+    color: #667eea;
+    min-width: 50px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(40, 15px);
+    gap: 1px;
+    background: #ddd;
+    padding: 1px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.cell {
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cell.alive {
+    background: #667eea;
+}
+
+.cell:hover {
+    opacity: 0.7;
+}
+
+.info {
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+#generation {
+    font-weight: bold;
+    color: #667eea;
+}
+
